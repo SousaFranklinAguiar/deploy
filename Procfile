@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar target/drogaria-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+--spring.profiles.active=prod
