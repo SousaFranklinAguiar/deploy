@@ -22,5 +22,8 @@ public class Categoria {
 	
 	@Column(length = 50, nullable=false, unique=true)
 	private String nome;
+	
+	@Column
+	private Short quantidade;
 
 }
