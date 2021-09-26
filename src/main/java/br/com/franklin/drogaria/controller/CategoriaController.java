@@ -18,7 +18,7 @@ import br.com.franklin.drogaria.domain.Categoria;
 import br.com.franklin.drogaria.repository.CategoriaRepository;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("categorias")
 public class CategoriaController {
 
