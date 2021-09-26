@@ -18,7 +18,7 @@ import br.com.franklin.drogaria.domain.Categoria;
 import br.com.franklin.drogaria.repository.CategoriaRepository;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://sousafranklinaguiar.github.io/front-end-deploy/")
 @RequestMapping("categorias")
 public class CategoriaController {
 
@@ -26,24 +26,28 @@ public class CategoriaController {
 	private CategoriaRepository categoriaRepository;
 	
 	@GetMapping
+	@CrossOrigin(origins = "https://sousafranklinaguiar.github.io/front-end-deploy/")
 	public List<Categoria> listar(){
 		List<Categoria> categorias = categoriaRepository.findAll();
 		return categorias;
 	}
 	
 	@GetMapping("/{codigo}")
+	@CrossOrigin(origins = "https://sousafranklinaguiar.github.io/front-end-deploy/")
 	public Categoria buscar(@PathVariable Short codigo) {
 		Optional<Categoria> categoria = categoriaRepository.findById(codigo);
 		return categoria.get();
 	}
 	
 	@PostMapping
+	@CrossOrigin(origins = "https://sousafranklinaguiar.github.io/front-end-deploy/")
 	public Categoria inserir(@RequestBody Categoria categoria) {
 		Categoria categoriaSalva = categoriaRepository.save(categoria);
 		return categoriaSalva;
 	}
 	
 	@DeleteMapping("/{codigo}")
+	@CrossOrigin(origins = "https://sousafranklinaguiar.github.io/front-end-deploy/")
 	public Categoria excluir(@PathVariable Short codigo) {
 		Optional<Categoria> categoria = categoriaRepository.findById(codigo);
 		categoriaRepository.delete(categoria.get());
@@ -51,6 +55,7 @@ public class CategoriaController {
 	}
 	
 	@PutMapping
+	@CrossOrigin(origins = "https://sousafranklinaguiar.github.io/front-end-deploy/")
 	public Categoria editar(@RequestBody Categoria categoria) {
 		Categoria categoriaEditada = categoriaRepository.save(categoria);
 		return categoriaEditada;
