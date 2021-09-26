@@ -22,7 +22,7 @@ public class CorsConfig {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE")
 				.allowedHeaders("*")
-				.allowedOrigins(allowedOrigin);
+				.allowedOrigins("https://sousafranklinaguiar.github.io/front-end-deploy/");
 			}
 		};
 	}
