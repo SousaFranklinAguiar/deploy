@@ -24,6 +24,6 @@ public class Categoria {
 	private String nome;
 	
 	@Column
-	private Short quantidade;
+	private String quantidade;
 
 }
